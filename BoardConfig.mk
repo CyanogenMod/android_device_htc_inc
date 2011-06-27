@@ -91,16 +91,9 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
 TARGET_PREBUILT_KERNEL := device/htc/inc/kernel
-TARGET_PREBUILT_RECOVERY_KERNEL := device/htc/inc/kernel
 
-BOARD_HAS_DATADATA := true
-BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1
-BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1
-BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
-BOARD_DATA_DEVICE := /dev/block/mmcblk0p1
-BOARD_DATA_FILESYSTEM := auto
-BOARD_CACHE_DEVICE := /dev/block/mmcblk0p2
-BOARD_CACHE_FILESYSTEM := auto
+BOARD_USES_MMCUTILS := true
+BOARD_HAS_LARGE_FILESYSTEM := true
 
 # Make sure vold formats the proper sdcard partition
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
